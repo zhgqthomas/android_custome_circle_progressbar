@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="apps">
+        <attr name="circleColor" format="color" />
+        <attr name="barColor" format="color" />
+
+        <!-- This for circle circumference : bar length -->
+        <attr name="barLengthRatio" format="dimension" />
+        <attr name="padding" format="dimension" />
+    </declare-styleable>
+
+</resources>

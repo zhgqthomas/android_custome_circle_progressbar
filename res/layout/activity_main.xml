@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:apps="http://schemas.android.com/apk/res/com.zhgq.progressbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <com.zhgq.progressbar.CustomProgressBar
+        android:id="@+id/my_spin_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.zhgq.progressbar.CustomProgressBar
+        android:id="@+id/my_sweep_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        apps:barColor="#9400d3"
+        apps:circleColor="#ffff00" />
+
+</LinearLayout>
