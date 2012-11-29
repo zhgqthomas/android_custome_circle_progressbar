@@ -10,12 +10,8 @@ import android.graphics.Paint.Style;
 import android.graphics.RectF;
 import android.os.Handler;
 import android.os.Message;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-import android.widget.ProgressBar;
 
 @SuppressLint({ "HandlerLeak", "HandlerLeak" })
 public class CustomProgressBar extends View {
@@ -62,14 +58,23 @@ public class CustomProgressBar extends View {
 	/* Bounds */
 	private RectF mCircleRectF;
 
+	public CustomProgressBar(Context context) {
+		super(context);
+		init();
+	}
+
 	public CustomProgressBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
 
 		extraAttributes(context.obtainStyledAttributes(attrs, R.styleable.apps));
 
+		init();
+
+	}
+
+	private void init() {
 		mCirclePaint = new Paint();
 		mBarPaint = new Paint();
-
 	}
 
 	private void extraAttributes(TypedArray array) {
@@ -115,7 +120,6 @@ public class CustomProgressBar extends View {
 		float diameter = width - 2 * mPadding;
 		double circumference = (double) diameter * PI;
 		mBarLength = (float) circumference / mBarLengthRatio;
-		Log.i("Somnus", "the bar length " + mBarLength);
 	}
 
 	private void setUpPaints() {
